@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Miranda Life | Timesheet </title>
+    <!-- meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- FontAwesome/Bootstrap/Custom CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link rel="stylesheet" href='css/main.css' />
+    <link rel="stylesheet" href='css/animate.css' />
+  </head>
+  <body onload="fetchDays(); totalHours(); totalMade()" id="home">
+
+    <!--Navigation-->
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top justify-content-between font-weight-light">
+        <div class="container">
+
+            <!-- Company Logo -->
+            <a href="" class="navbar-brand"><img src="img/shake.png" alt="Miranda Life Image" class="img-fluid rounded mx-auto d-block mb-2"/></a>
+
+            <!-- Hamburger toggler for mobile -->
+            <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarcollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- navbar links -->
+            <div class="collapse navbar-collapse" id="navbarcollapse">
+                <!-- Button trigger login modal -->
+                <a href="index.html" class="ml-auto nav-item text-muted ">HOME</a>
+                <a href="timesheet.html" class="nav-item text-muted ml-3">TIMESHEET</a>
+                <a href="faq.html" class="nav-item text-muted ml-3">FAQs</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Begin timesheet -->
+    <div class="content-container container">
+        <h4 class="section-title py-4 text-center">YOUR EARNINGS</h4>
+        <div class="row mb-5">
+
+            <!-- Form for adding days -->
+            <div class="col-md-6">
+                <div class="jumbotron">
+                    <h3 class="font-weight-light mb-3 text-center">TODAYS HAUL</h3>
+                    <form action="" id="myForm">
+                        <!-- day select -->
+                        <div class="form-group">
+                            <label for="day" class="font-weight-light">What day is it?</label>
+                            <select class="form-control" id="day">
+                                <option value="Monday">MONDAY</option>
+                                <option value="Tuesday">TUESDAY</option>
+                                <option value="Wednesday">WEDNESDAY</option>
+                                <option value="Thursday">THURSDAY</option>
+                                <option value="Friday">FRIDAY</option>
+                                <option value="Saturday">SATURDAY</option>
+                                <option value="Sunday">SUNDAY</option>
+                            </select>
+                        </div>
+                        <!-- How many hours for day -->
+                        <div class="form-group">
+                            <label for="hour" class="font-weight-light">How many hours did you get today?</label>
+                            <input type="number" step="0.01" class="form-control" id="hour" placeholder="8">
+                        </div>
+                        <!-- What they made -->
+                        <div class="form-group">
+                            <label for="made" class="font-weight-light">What did you make today?</label>
+                            <input type="number" step="0.01" class="form-control" id="made" placeholder="144">
+                        </div>
+                        <!-- Notes for the day -->
+                        <div class="form-group">
+                            <label for="notes" class="font-weight-light">Notes for today?</label>
+                            <textarea class="form-control" id="notes" rows="3"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-outline-info col-md-12">ADD DAY</button>
+                    </form>
+                </div>
+                <div class="jumbotron">
+                    <h3 class="font-weight-light mb-3 text-center">WEEKLY TOTALS</h3>
+                    <div id="hourTotal" class="text-center"></div>
+                    <br>
+                    <div id="cashTotal" class="text-center"></div>
+                </div>
+            </div>
+
+            <!-- Daily input shows here -->
+            <div class="col-md-6 list-group">
+                <div class="jumbotron">
+                    <h3 class="font-weight-light mb-3 text-center">THE PAST WEEK</h3>
+                    <div id="daysResults">
+
+                    </div>
+                </div>
+
+                <!-- Delete week button -->
+                <form action="" id="weekDelete" class="col-md-12">
+                    <button type="submit" class="btn btn-outline-danger mt-3 col-md-12">CLEAR WEEK</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+        
+    <!-- Footer -->
+    <footer id="footer" class="bg-dark">
+        <div class="container py-3">
+            <div class="row">
+                <div class="col text-center">
+                    <a href="http://www.jgdezigns.com" target="_blank"><img src="img/logo.svg"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+    <script src="js/timesheet.js"></script>
+  </body>
+</html>
