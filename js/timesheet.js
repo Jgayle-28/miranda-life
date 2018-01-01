@@ -1,3 +1,10 @@
+// Load functions that populate html when widnow loads
+window.onload =  function(){
+    fetchDays();
+    totalHours();
+    totalMade()
+};
+
 // listen for form submit on todays haul button
 document.getElementById('myForm').addEventListener('submit', saveDay);
 
