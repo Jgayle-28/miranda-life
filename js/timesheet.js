@@ -58,6 +58,10 @@ function saveDay(p){
     // Re-fetch days
     fetchDays();
 
+    // Get Total hours
+    totalHours();
+    // Get total made
+    totalMade();
     // prevents form from submitting
     p.preventDefault();
 }
@@ -108,7 +112,7 @@ function totalHours(){
     console.log(sumHours);
 
     
-    hourTotal.innerHTML += '<p class="mb-1">.:: TOTOAL HOURS ::.</p>' +
+    hourTotal.innerHTML = '<p class="mb-1">.:: TOTOAL HOURS ::.</p>' +
                            '<span class="mb-3 text-info">' + sumHours + '</span>' +
                            '<br>';
        
@@ -131,7 +135,7 @@ function totalMade(){
     console.log(sumCash);
 
     
-    cashTotal.innerHTML += '<p class="mb-1">.:: TOTAL MADE ::.</p>' +
+    cashTotal.innerHTML = '<p class="mb-1">.:: TOTAL MADE ::.</p>' +
                            '<p class="mb-3 text-info">' + sumCash + '</p>';
 }
 
