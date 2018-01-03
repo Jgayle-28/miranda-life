@@ -43,10 +43,11 @@ body{
 /* Hero Section */
 #home-section{
     background: url('../img/hero.jpg') no-repeat ;
-    background-position: center center;
+    background-size: cover;    
+    margin: 0 auto;
     min-height: 100vh;
-    background-size: cover;
-    background-attachment: fixed;
+    width: 100%;
+    background-attachment: fixed; 
 }
 
 .dark-overlay{
