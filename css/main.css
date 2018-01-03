@@ -41,7 +41,7 @@ body{
 }
 
 /* Hero Section */
-#home-section{
+#home-section {
     background: url('../img/hero.jpg') no-repeat center;
     background-size: cover;    
     margin: 0 auto;
@@ -60,7 +60,7 @@ body{
 }
 
 .home-inner{
-    padding-top: 350px;
+    padding-top: 300px;
 
 }
 
