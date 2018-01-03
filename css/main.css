@@ -42,7 +42,7 @@ body{
 
 /* Hero Section */
 #home-section{
-    background: url('../img/hero.jpg') no-repeat ;
+    background: url('../img/hero.jpg') no-repeat center;
     background-size: cover;    
     margin: 0 auto;
     min-height: 100vh;
@@ -67,7 +67,7 @@ body{
 .arrow {    
     width: 30px;
     height: 30px;
-    margin-top: 15vh;
+    margin-top: 10vh;
     
 }
 
